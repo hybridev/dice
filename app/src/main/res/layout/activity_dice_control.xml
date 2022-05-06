@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DiceControl">
+
+    <com.hybridev.dice.DiceView
+
+        android:id="@+id/dice_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </com.hybridev.dice.DiceView>
+
+
+    <Button
+        android:id="@+id/bt_dice_control_roll_dice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/dice_view"
+        app:layout_constraintTop_toTopOf="@id/dice_control_glh_0.7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:text="@string/Roll"
+
+        />
+
+    <TextView
+        android:id="@+id/temp_roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rolling"
+        app:layout_constraintBottom_toBottomOf="@id/dice_control_glh_0.7"
+        app:layout_constraintLeft_toRightOf="@id/dice_view"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/piece_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="info"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/dice_view"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.hybridev.dice.DiceBattleView
+
+        android:id="@+id/dice_battle_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </com.hybridev.dice.DiceBattleView>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/dice_control_glv_0.8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/dice_control_glh_0.7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

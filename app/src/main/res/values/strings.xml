@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">dice</string>
+    <string name="StartDice">StartDice</string>
+    <string name="Roll">Roll</string>
+    <string name="piece_info">name : %1$s\ncol : %2$d\nrow : %3$d\n</string>
+
+</resources>
