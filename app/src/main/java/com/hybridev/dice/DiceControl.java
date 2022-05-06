@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 public class DiceControl extends AppCompatActivity implements DiceDelegate {
 
+    //gittest
+
     DiceModel diceModel = new DiceModel();
     DiceView diceView;
     DiceBattleView diceBattleView;
