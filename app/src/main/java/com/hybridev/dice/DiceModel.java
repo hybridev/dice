@@ -2,7 +2,16 @@ package com.hybridev.dice;
 
 
 
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 
 public class DiceModel {
 
@@ -15,6 +24,7 @@ public class DiceModel {
     DicePiece fixedBattlePiece;
 
     int[][] movableRange = {{-1,-1},{-1,-1},{-1,-1},{-1,-1},{-1,-1},{-1,-1},{-1,-1},{-1,-1}};
+
 
     DiceModel()
     {

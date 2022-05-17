@@ -19,8 +19,5 @@ public class DiceEnemy extends DicePiece{
         type = DiceEnums.pieceType.Enemy;
         dice = new Dice(DiceEnums.pieceType.Enemy);
 
-        col = 2;
-        row = 0;
-
     }
 }

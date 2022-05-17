@@ -203,10 +203,27 @@ public class Dice {
 
     class DicePip
     {
+        DiceEnums.pipType type;
+        int resID;
 
         DicePip()
         {
+            type = DiceEnums.pipType.Plain;
+            resID = R.drawable.plaindot;
+        }
 
+        DicePip(DiceEnums.pipType type)
+        {
+            switch (type){
+                case Plain:
+                    type = DiceEnums.pipType.Plain;
+                    resID = R.drawable.plaindot;
+                    break;
+                case Iron:
+                    type = DiceEnums.pipType.Iron;
+                    resID = R.drawable.irondot;
+                    break;
+            }
         }
     }
 }

@@ -31,7 +31,7 @@ public class DiceBattleView extends View {
 
     Paint paint = new Paint();
 
-    public Set<Integer> imgResIDs = new HashSet<Integer>();
+    //public Set<Integer> imgResIDs = new HashSet<Integer>();
     public Map<Integer, Bitmap> bitmaps = new HashMap<Integer, Bitmap>();
 
     DiceDelegate diceDelegate;
@@ -42,13 +42,13 @@ public class DiceBattleView extends View {
     public DiceBattleView(Context context) {
         super(context);
 
-        loadBitmaps();
+        //loadBitmaps();
     }
 
     public DiceBattleView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
 
-        loadBitmaps();
+        //loadBitmaps();
     }
 
     @Override
@@ -147,9 +147,9 @@ public class DiceBattleView extends View {
                     originX + (col + 1) * cellSide, originY + ((7 - row) + 1) * cellSide), paint);
     }
 
-    private void loadBitmaps()
+    protected void loadBitmaps()
     {
-        imgResIDs.add(R.drawable.testrpg);
+/*        imgResIDs.add(R.drawable.testrpg);
         imgResIDs.add(R.drawable.testssam_ccexpress);
         imgResIDs.add(R.drawable.mountain1);
         imgResIDs.add(R.drawable.mountain2);
@@ -159,7 +159,9 @@ public class DiceBattleView extends View {
         {
             int resId = resIDIter.next();
             bitmaps.put(resId, BitmapFactory.decodeResource(getContext().getResources(), resId));
-        }
+        }*/
+
+        bitmaps = diceDelegate.getBitmaps();
     }
 
     void selectPiece(int col, int row)

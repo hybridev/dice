@@ -3,6 +3,7 @@ package com.hybridev.dice;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.Log;
@@ -11,9 +12,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class DiceControl extends AppCompatActivity implements DiceDelegate {
+import java.util.Map;
 
-    //gittest
+public class DiceControl extends AppCompatActivity implements DiceDelegate {
 
     DiceModel diceModel = new DiceModel();
     DiceView diceView;
@@ -39,6 +40,7 @@ public class DiceControl extends AppCompatActivity implements DiceDelegate {
 
         diceBattleView = findViewById(R.id.dice_battle_view);
         diceBattleView.diceDelegate = this;
+        diceBattleView.loadBitmaps();
         diceBattleView.setVisibility(View.GONE);
 
         tv_piece_info = findViewById(R.id.piece_info);
@@ -59,8 +61,6 @@ public class DiceControl extends AppCompatActivity implements DiceDelegate {
                     tv_show_ap.setText(Integer.toString(battlePipSum));
                     diceModel.fixBattlePiece(diceModel.selectedPiece);
                     diceBattleView.setMovableRange(diceModel.getMovableRange());
-                    //diceBattleView.
-
                 }
                 else
                 {
@@ -212,6 +212,7 @@ public class DiceControl extends AppCompatActivity implements DiceDelegate {
         }
         return ret;
     }
+
 
     @Override
     public DicePiece battlePieceAt(int col, int row) {

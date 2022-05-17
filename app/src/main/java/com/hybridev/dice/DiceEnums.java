@@ -11,5 +11,11 @@ public class DiceEnums {
         Blank
     }
 
+    public enum pipType
+    {
+        Plain,
+        Iron
+    }
+
 
 }

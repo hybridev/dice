@@ -168,7 +168,6 @@ public class DiceView extends View {
 
     private void drawPieceAt(Canvas canvas, int col, int row, int resID)
     {
-        //Log.d("tempD", "draw " + Integer.toString(resID));
         Bitmap bitmap = bitmaps.get(resID);
         if(bitmap == null)
             Log.d("tempD", "null " + Integer.toString(resID));
@@ -190,6 +189,7 @@ public class DiceView extends View {
             int resId = resIDIter.next();
             bitmaps.put(resId, BitmapFactory.decodeResource(getContext().getResources(), resId));
         }
+
     }
 
     void selectPiece(int col, int row)

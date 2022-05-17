@@ -38,16 +38,17 @@ public class DicePiece {
                 battlePieceList = new ArrayList<DicePlayer>();
                 for(int i = 0; i < battlePieceNum; i++)
                 {
-                    battlePieceList.clear();
                     battlePieceList.add(new DicePlayer(name, resID));
                 }
                 break;
             case Enemy:
+                battlePieceNum = 2;
                 battlePieceList = new ArrayList<DiceEnemy>();
                 for(int i = 0; i < battlePieceNum; i++)
                 {
-                    battlePieceList.clear();
-                    battlePieceList.add(new DiceEnemy(name, resID));
+                    DiceEnemy enemy = new DiceEnemy(name, resID);
+                    enemy.col = 1+i; enemy.row = 0;
+                    battlePieceList.add(enemy);
                 }
                 break;
             case Terrain:

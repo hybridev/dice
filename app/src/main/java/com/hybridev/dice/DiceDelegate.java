@@ -1,5 +1,9 @@
 package com.hybridev.dice;
 
+import android.graphics.Bitmap;
+
+import java.util.Map;
+
 public interface DiceDelegate {
 
     DicePiece pieceAt(int col, int row);
